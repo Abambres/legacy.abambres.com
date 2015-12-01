@@ -1,0 +1,38 @@
+# humanstxt.org
+
+# TEAM
+
+  Master Architect:
+    Alfredo Abambres
+    @alfredoabambres
+    http://alfredo.abambres.com
+
+# THANKS
+
+  <name>
+  
+# SITE
+
+  Language: English / Português
+
+# TECHNOLOGY COLOPHON
+
+  Standards: 
+    HTML5
+    CSS3
+    JS
+    
+  Components: 
+    Google Fonts
+    FontAwesome       4.5.0
+    ZURB Foundation   6.0.4
+    JQuery            2.1.4
+    ...
+    
+  Software:
+    Brackets
+    Notepad++
+    Console2 Portable
+    Google Chrome
+    Windows 10
+    ...
