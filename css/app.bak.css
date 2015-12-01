@@ -1,0 +1,634 @@
+=== {}
+=== BASE | GLOBAL STYLES {} #FIXME
+=== {}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  overflow-y: scroll;
+}
+body>* {
+  clear: both;
+  padding: 0 2rem 3em;
+}
+
+li { 
+  margin: .5em 0;
+}
+
+a:focus,
+a:hover {
+  color: #D00;
+}
+
+=== {}
+=== BASE | GLOBAL CLASSES {} #FIXME
+=== {}
+
+----- {}  /* NOTIFICATION: Upgrade Request for Old Browsers */
+
+.callout.outdated-browser {
+  margin: 0;
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #FEE;
+  border: none;
+  border-bottom: 1px solid #DDD;
+}
+.callout.outdated-browser i {
+  font-size: 3em;
+  margin-bottom: .5em;
+}
+.callout.outdated-browser .close-button {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+----- {}  /* SOCIAL MEDIA Basics and Colors */
+
+.social a                           { color: inherit; }
+.social .rss:not(:hover) i          { color: #ff6600; }
+.social .google-plus:not(:hover) i  { color: #dd4b39; }
+.social .twitter:not(:hover) i      { color: #00aced; }
+.social .facebook:not(:hover) i     { color: #3b5998; }
+.social .linkedin:not(:hover) i     { color: #007bb6; }
+.social .github:not(:hover) i       { color: #000000; }
+
+----- {}  /* NAVIGATION: MENUS */
+
+.menu {
+  margin-top: 2.5em;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.menu.nested {
+  margin-right: 0;
+}
+.menu:not(.vertical) li { 
+  display: inline-block;
+}
+.menu li { 
+  margin: 0;
+}
+.menu li a { 
+  padding: 1em;
+}
+.menu li a i { 
+  margin: 0;
+  font-size: 1.5em;
+}
+.menu a:focus,
+.menu a:hover {
+  transition: background 300ms ease;
+  background-color: rgba(255,255,255,.2);
+}
+
+.menu.vertical i + .text { 
+  margin-left: .5em;
+}
+
+----- {}  /* MENU: SITEMAP */
+
+.menu.sitemap .menu-text {
+  color: #900;
+  font-weight: normal;
+}
+.menu.sitemap a:not(:hover) {
+  color: #000;
+}
+
+----- {}  /* MENU: SOCIAL */
+
+.menu.social:not(.vertical) i + .text {
+  display: none;
+}
+
+----- {}  /* NAVIGATION: BREADCRUMBS */
+
+.breadcrumbs {
+  font-family: "Open Sans", sans-serif;
+}
+.breadcrumbs li {
+  font-size: .8em;
+  font-weight: bold;
+}
+.breadcrumbs li:first-child {
+  width: 1.5rem;
+  margin-right: .5rem;
+}
+.breadcrumbs li:first-child i {
+  font-size: 1.2em;
+  color: #D00;
+}
+.breadcrumbs li:not(:last-child)::after {
+  top: 0px !important;
+}
+.breadcrumbs li:first-child::after {
+  display: none;
+}
+.breadcrumbs li:last-child a {
+  color: #000;
+}
+.breadcrumbs a {
+  color: #999;
+}
+.breadcrumbs a:hover {
+  text-decoration: none;
+  color: #D00;
+}
+
+----- {}  /* PAGE ELEMENTS: PAGE SLIDER */
+
+.pages-slider {
+  width: 100%;
+  margin: 3em 0 0;
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+.pages-slider tbody {
+  background: none;
+  border: none;
+}
+.pages-slider td {
+  text-align: center;
+  color: #000;
+  padding: 0;
+  font-size: 1.5em;
+}
+.pages-slider td:first-of-type {
+  text-align: left;
+}
+.pages-slider td:last-of-type {
+  text-align: right;
+}
+.pages-slider td>i {
+  color: #CCC;
+  font-size: .8rem;
+  vertical-align: middle;
+}
+.pages-slider td>i.active {
+  color: #000;
+}
+.pages-slider a:hover,
+.pages-slider a:focus {
+  color: #000;
+}
+
+----- {}  /* PAGE ELEMENTS: HEADER | INTRO */
+
+.intro .description {
+  margin: 0;
+}
+.intro .description b:first-child,
+.intro .byline {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+.intro .description b:first-child {
+  display: block;
+  margin: 0 0 .5rem;
+  color: #FFF;
+  text-shadow: 0px 0px 3px rgba(0,0,0,1);
+}
+.intro .description br {
+  display: none;
+}
+.intro .byline {
+  margin: .5rem 0 0;
+  color: #D00;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+.intro .byline:before {
+  content:"\2014 \0020";
+  display: inline-block;
+  margin-left: -1rem;
+  width: 1rem;
+}
+
+----- {}  /* PAGE ELEMENTS: FOCUS */
+
+.focus {
+  margin: 3em 0 0;
+}
+.focus li {
+  list-style: none;
+}
+.focus li a::before {
+  content: "\f006";
+  font-family: "FontAwesome";
+  font-size: 1em;
+  color: #000;
+}
+.focus a:not(:hover) {
+  color: #D00;
+}
+.focus a:hover {
+  color: #000;
+}
+.focus .text {
+  margin-left: .5em;
+}
+
+----- {}  /* PAGE ELEMENTS: FEATURED */
+
+.featured dt {
+  margin-top: 3em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+}
+.featured dt:before {
+  content: "Focus \0020";
+  color: #D00;
+  font-weight: normal;
+}
+
+.featured dd {
+  font-family: "Open Sans", sans-serif;
+}
+
+.featured .link {
+  font-family: "Open Sans", sans-serif;
+  font-size: .8em;
+  font-weight: bold;
+  letter-spacing: .5px;
+  margin-top: 1em;
+}
+.featured .link:before {
+  content: "\F006 \0020";
+  font-family: "Fontawesome";
+  margin-right: .25em;
+}
+
+----- {} /* #FIXME: PAGE ELEMENT: LIST POSTS | can this be more generic? how about "list projects"... */
+
+.posts {
+  margin-top: 3em;
+}
+
+.posts article {
+  margin: 0 -2rem;
+  padding: 1.5em 2rem;
+  border-bottom: 1px solid #EEE;
+}
+.posts article:first-child {
+  border-top: 1px solid #EEE;
+}
+.posts article h1 {
+  clear: both;
+  font-size: 1em;
+  font-family: "Merriweather", sans-serif;
+  margin: 0;
+}
+.posts article h1 a:not(:hover) {
+  color: #000;
+}
+.posts article time,
+.posts article p {
+  font-size: .8em;
+  font-family: "Open Sans", sans-serif;
+}
+.posts article p {
+  display: none;
+  opacity: .8;
+}
+.posts article time {
+  opacity: .3;
+  font-weight: bold;
+}
+.posts article label {
+  float: right;
+  color: #D00;
+  font-weight: bold;
+  opacity: .3;
+  text-transform: lowercase;
+}
+
+----- {}
+=== BODY > HEADER {} #FIXME
+----- {}
+
+body>header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  max-height: 4rem;
+  line-height: 4rem;
+  background-color: #FFF;
+  color: #000;
+  box-shadow: 0 1px 20px 0px rgba(0,0,0,.2);
+  font-family: "Open Sans", sans-serif;
+  font-size: .8rem;
+  letter-spacing: .5px;
+}
+body {
+  padding-top: 4rem;
+}
+
+----- {}  /* SITE ID */
+
+.site-id {
+  padding-right: 3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.site-id .avatar {
+  float: left;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: .15rem solid transparent;
+  margin-top: 0.75rem;
+  margin-right: .5rem;
+}
+.site-id .title {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.site-id a:hover .avatar {
+  border-color: #D00;
+}
+.site-id a:hover .title {
+  color: #D00;
+}
+
+----- {}
+
+.site-nav-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4rem;
+  line-height: 4rem;
+  padding: 0;
+  outline: none;
+  font-size: 1.5rem;
+}
+.site-nav-toggle:hover{
+  color: #D00;
+}
+
+=== {}
+=== BODY > NAV {} #FIXME
+=== {}
+
+.site-nav {
+  z-index: 99;
+  display: none;
+  background-color: rgba(50,50,50,1);
+  color: #FFF;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.5);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  padding: 1rem 2rem;
+}
+.site-nav .menu {
+  margin-top: 0;
+}
+.site-nav .menu-text {
+  color: #DD0 !important;
+}
+.site-nav .menu i,
+.site-nav .menu a {
+  color: #FFF !important;
+}
+
+----- {}
+
+body>nav.breadcrumbs {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  line-height: 3.4rem;
+  margin: 0;
+  opacity: .5;
+}
+
+=== {}
+=== BODY > MAIN {} #FIXME
+=== {}
+
+body>main {
+  font-size: 1rem;
+  margin-top: 0;
+  padding-top: 3rem;
+}
+
+body>main>* {
+  margin: 3em 0 0;
+  font-size: 1em;
+}
+
+body>main>header {
+  color: #000;
+}
+
+body>main>header .intro {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #DDD;
+  color: #000;
+  margin: -6rem -2rem 0;
+  padding: 6rem 2rem 4em;
+}
+
+body>main .content p:empty {
+  display: none;
+}
+
+=== {}
+=== BODY > ARTICLE {} #FIXME
+=== {}
+
+body>article {
+  margin-top: 0;
+  padding-top: 3rem;
+  font-size: 1rem;
+}
+
+body>article>* {
+  margin: 3em 0 0;
+}
+
+body>article .content p:empty {
+  display: none;
+}
+
+=== {}
+=== BODY > ASIDE {} #FIXME
+=== {}
+
+body>aside {
+}
+
+=== {}
+=== BODY > FOOTER {} #FIXME
+=== {}
+
+body>footer {
+  font-size: .8rem;
+}
+
+body>footer>* {
+  margin: 3em 0 0;
+  font-size: 1em;
+}
+body>footer>:first-child {
+  margin-top: 0;
+}
+
+body>footer .copyright {
+  font-weight: bold;
+}
+body>footer .copyright a {
+  font-weight: normal;
+}
+
+body>footer blockquote {
+  padding: 0;
+  border: none;
+  padding-left: 1.5rem;
+}
+body>footer blockquote:before {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+  margin-left: -1.5rem;
+  display: inline-block;
+  width: 1.5rem;
+}
+body>footer blockquote q:before,
+body>footer blockquote q:after {
+  display: none;
+}
+body>footer blockquote cite {
+  margin-top: .5em;
+  font-style: normal;
+}
+
+=== {}
+=== PAGES / DEFAULT {} #FIXME
+=== {}
+
+----- {}  /* #FIXME: PAGE -- TERMS' LIST (ex: LIST OF TAGS) */
+
+body.p-terms main ul {
+  list-style: none;
+}
+
+body.p-terms main small {
+  font-size: 1em;
+  float: left;
+  width: 1.5em;
+  margin-right: .5em;
+  color: #999;
+}
+
+----- {}
+
+body.p-list .posts {
+  margin-top: -1rem;
+}
+
+----- {}
+
+body.p-single .breadcrumbs li:nth-last-child(2)::after,
+body.p-single .breadcrumbs li:last-child {
+  display: none;
+}
+
+=== {}
+=== PAGES {}  #FIXME
+=== {}
+
+body.t-focus {
+  background-color: #D32F2F;
+  color: #FFF;
+}
+body.t-focus a:hover {
+  color: #FFEB3B;
+}
+
+body.t-focus>.breadcrumbs {
+  opacity: 1;
+}
+body.t-focus>.breadcrumbs li:first-child i {
+  color: #000;
+}
+body.t-focus.p-index>.breadcrumbs :first-child {
+  color: transparent;
+  text-shadow: 0px 0px 10px #000;
+}
+
+body.t-focus .intro {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 0;
+}
+body.t-focus .intro .description {
+  color: #FFF;
+}
+body.t-focus .intro .byline {
+  color: #000;
+}
+
+body.t-focus .pages-slider td>i {
+  color: #900;
+}
+body.t-focus .pages-slider td>i.active {
+  color: #FFF;
+}
+
+body.t-focus .focus {
+  font-family: "Open Sans", sans-serif;
+}
+body.t-focus .focus li a::before {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+body.t-focus .focus a:not(:hover) {
+  color: #FFF;
+}
+
+body.t-focus>main .menu {
+  font-family: "Open Sans", sans-serif;
+}
+body.t-focus.p-index>main .menu.sitemap {
+  text-transform: uppercase;
+}
+body.t-focus>main .menu a:not(:hover),
+body.t-focus>main .menu a:not(:hover) i {
+  color: #FFF;
+}
+body.t-focus>main .menu.sitemap i {
+  color: #000 !important;
+}
+
+body.t-focus>footer q {
+  color: #FFF;
+}
+body.t-focus>footer .copyright,
+body.t-focus>footer cite,
+body.t-focus>footer a {
+  color: #000;
+}
